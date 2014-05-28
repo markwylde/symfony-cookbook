@@ -286,3 +286,5 @@ becc47,::1,GET,http://localhost:182/symbook/path/web/app_dev.php/recipe/29,14012
 76867a,::1,GET,http://localhost:182/symbook/path/web/app_dev.php/recipe/5,1401274163,
 4e7d89,::1,GET,http://localhost:182/symbook/path/web/app_dev.php/recipe/submit,1401274164,
 1c3b31,::1,GET,http://localhost:182/symbook/path/web/app_dev.php/about/,1401274167,
+bbc558,::1,GET,http://localhost:182/symbook/path/web/app_dev.php/,1401277420,
+29c460,::1,GET,http://localhost:182/symbook/path/web/app_dev.php/about/,1401277422,
