@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8" />
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
+        <link href="{{ asset('bundles/bmatznerfoundation/css/foundation.min.css') }}" media="screen, projection" rel="stylesheet"/>
+        <link href="{{ asset('css/screen.css') }}" media="screen, projection" rel="stylesheet"/>
+        {% block stylesheets %}
+        {% endblock %}
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+    </head>
+    <body>
+
+    <nav class="top-bar" data-topbar>
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="#">The CookBook</a></h1>
+            </li>
+
+            <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+        </ul>
+
+        <section class="top-bar-section">
+            <!-- Right Nav Section -->
+            <ul class="right">
+                <li class="has-dropdown">
+                    <a href="#">More Links</a>
+                    <ul class="dropdown">
+                        <li><a href="http://www.markwylde.co.uk">markwylde.co.uk</a></li>
+                        <li><a href="https://github.com/markwylde/">github.com/markwylde</a></li>
+                    </ul>
+                </li>
+            </ul>
+
+            <!-- Left Nav Section -->
+            <ul class="left">
+                <li><a href="{{ path('baker_recipe_about') }}">About</a></li>
+                <li><a href="{{ path('baker_recipe_list') }}">All Recipes</a></li>
+                <li><a href="{{ path('baker_recipe_create') }}">Submit Recipe</a></li>
+            </ul>
+        </section>
+    </nav>
+
+        {% block body %}{% endblock %}
+
+        <script src="{{ asset('bundles/bmatznerjquery/js/jquery.min.js') }}"></script>
+        <script src="{{ asset('bundles/bmatznerfoundation/js/foundation.min.js') }}"></script>
+        <script>$(document).foundation();</script>
+        {% block javascripts %}{% endblock %}
+    </body>
+</html>

@@ -1,0 +1,23 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}The CookBook{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="large-12 columns">
+
+            <h1>About The CookBook</h1>
+
+            <img src='{{ asset('images/cooking.jpg') }}' />
+
+            <p>This is `The CookBook`, an example PHP application written using the Symfony framework.</p>
+
+            <p>Have a look at our <a href="{{ path('baker_recipe_list') }}">Recipes</a> or
+                <a href="{{ path('baker_recipe_create') }}">Submit</a> your own one to our database.</p>
+
+        </div>
+    </div>
+
+{% endblock %}
+

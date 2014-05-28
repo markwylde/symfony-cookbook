@@ -1,0 +1,7 @@
+parameters:
+#    baker_recipe.example.class: Baker\RecipeBundle\Example
+
+services:
+#    baker_recipe.example:
+#        class: %baker_recipe.example.class%
+#        arguments: [@service_id, "plain_value", %parameter%]

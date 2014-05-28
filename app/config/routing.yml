@@ -1,0 +1,4 @@
+baker_recipe:
+    resource: "@BakerRecipeBundle/Resources/config/routing.yml"
+    prefix:   /
+

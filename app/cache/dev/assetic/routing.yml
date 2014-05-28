@@ -1,0 +1,5 @@
+_assetic:
+    resource: .
+    type: assetic
+_app:
+    resource: /Library/WebServer/Documents/symbook/path/app/config/routing_dev.yml

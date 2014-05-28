@@ -1,0 +1,25 @@
+baker_recipe_about:
+    pattern:  /about/
+    defaults: { _controller: BakerRecipeBundle:Page:about }
+
+baker_recipe_list:
+    pattern:  /recipes
+    defaults: { _controller: BakerRecipeBundle:Recipe:list }
+    requirements:
+        _method:  GET
+        id: \d+
+
+
+baker_recipe_create:
+    pattern:  /recipe/submit
+    defaults: { _controller: BakerRecipeBundle:Recipe:create }
+    requirements:
+        _method:  GET|POST
+        blog_id: \d+
+
+baker_recipe_read:
+    pattern:  /recipe/{id}
+    defaults: { _controller: BakerRecipeBundle:Recipe:read }
+    requirements:
+        _method:  GET
+        id: \d+

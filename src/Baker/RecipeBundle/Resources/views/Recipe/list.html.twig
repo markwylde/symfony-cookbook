@@ -1,0 +1,42 @@
+{% extends '::base.html.twig' %}
+
+{% block stylesheets %}
+    <link href="{{ asset('css/screen.css') }}" media="screen, projection" rel="stylesheet"/>
+{% endblock %}
+
+{% block title %}The CookBook - Recipes{% endblock %}
+
+{% block body %}
+
+    <div class="row">
+        <div class="large-12 columns">
+
+            <h1>Our Recipes</h1>
+            <p>Want to cook a meal yourself tonight? Have a look at our delicious recipes</p>
+            <table width="100%">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Author</th>
+                        <th>Created</th>
+                    </tr>
+                </thead>
+                <tbody>
+
+                {% for recipe in recipes %}
+                    <tr>
+                        <td><a href='{{ path('baker_recipe_read', {'id': recipe.id}) }}'>{{ recipe.title }}</a></td>
+                        <td>{{ recipe.author }}</td>
+                        <td>{{ recipe.created |date("m/d/Y") }}</td>
+                    </tr>
+                {% endfor %}
+
+                </tbody>
+            </table>
+
+            </ul>
+
+        </div>
+    </div>
+
+{% endblock %}

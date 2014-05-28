@@ -1,0 +1,41 @@
+{% extends '::base.html.twig' %}
+
+{% block title %}The CookBook - {{ recipe.title }}{% endblock %}
+
+{% block body %}
+
+    <section role="main" class="scroll-container">
+    <div class="row">
+        <div class="large-3 medium-4 columns">
+
+            <div class='sidebar'>
+                <strong>Other recipes</strong>
+                <ul class='side-nav'>
+                    {% for recipe in recipesList %}
+                        <li><a href='{{ path('baker_recipe_read', {'id': recipe.id}) }}'>{{ recipe.title }}</a></li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+
+        <div class='large-9 medium-8 columns'>
+
+            <article class="recipe">
+                <header>
+                    <h2>{{ recipe.title }}</h2>
+                    <div class="date">This post was created on <time datetime="{{ recipe.created|date('c') }}">{{ recipe.created|date('l, F j, Y') }}</time></div>
+                </header>
+                {%  if recipe.path %}
+                <p>
+                    <img src="{{ asset(['uploads/documents/', recipe.path ]|join) }}" alt="{{ recipe.title }} image not found" class="large" />
+                </p>
+                {%  endif %}
+                <div>
+                    <p>{{ recipe.content | striptags('<strong><b><u><i><a>') | raw }}</p>
+                </div>
+            </article>
+
+        </div>
+    </div>
+    </section>
+{% endblock %}

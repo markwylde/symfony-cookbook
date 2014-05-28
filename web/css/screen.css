@@ -1,0 +1,26 @@
+* {
+  font-family: opensans, tahoma;
+}
+.sidebar {
+  background: #FAFAFA;
+  padding: 32px 20px;
+  margin-top: 10px;
+}
+.top-bar {
+  margin-bottom: 15px;
+}
+h1 {
+  font-size: 30px;
+  color: #535224;
+}
+.side-nav a {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
+article header {
+  margin-bottom: 10px;
+}
+article header .date {
+  font-style: italic;
+}
