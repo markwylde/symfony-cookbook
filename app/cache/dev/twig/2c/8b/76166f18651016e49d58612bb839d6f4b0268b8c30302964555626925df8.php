@@ -79,10 +79,12 @@ class __TwigTemplate_2c8b76166f18651016e49d58612bb839d6f4b0268b8c303029645556269
             // line 29
             echo twig_escape_filter($this->env, $this->getAttribute((isset($context["recipe"]) ? $context["recipe"] : $this->getContext($context, "recipe")), "author"), "html", null, true);
             echo "</td>
-                        <td>";
+                        <td><time datetime=\"";
             // line 30
-            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["recipe"]) ? $context["recipe"] : $this->getContext($context, "recipe")), "created"), "m/d/Y"), "html", null, true);
-            echo "</td>
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["recipe"]) ? $context["recipe"] : $this->getContext($context, "recipe")), "created"), "c"), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute((isset($context["recipe"]) ? $context["recipe"] : $this->getContext($context, "recipe")), "created"), "dS M y"), "html", null, true);
+            echo "</time></td>
                     </tr>
                 ";
         }
@@ -114,6 +116,6 @@ class __TwigTemplate_2c8b76166f18651016e49d58612bb839d6f4b0268b8c303029645556269
 
     public function getDebugInfo()
     {
-        return array (  93 => 33,  84 => 30,  80 => 29,  74 => 28,  71 => 27,  67 => 26,  49 => 10,  46 => 9,  40 => 7,  33 => 4,  30 => 3,);
+        return array (  95 => 33,  84 => 30,  80 => 29,  74 => 28,  71 => 27,  67 => 26,  49 => 10,  46 => 9,  40 => 7,  33 => 4,  30 => 3,);
     }
 }

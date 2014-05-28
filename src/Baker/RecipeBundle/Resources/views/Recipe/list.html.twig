@@ -27,7 +27,7 @@
                     <tr>
                         <td><a href='{{ path('baker_recipe_read', {'id': recipe.id}) }}'>{{ recipe.title }}</a></td>
                         <td>{{ recipe.author }}</td>
-                        <td>{{ recipe.created |date("m/d/Y") }}</td>
+                        <td><time datetime="{{ recipe.created|date('c') }}">{{ recipe.created|date('dS M y') }}</time></td>
                     </tr>
                 {% endfor %}
 
