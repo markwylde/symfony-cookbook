@@ -31,7 +31,7 @@
                 </p>
                 {%  endif %}
                 <div>
-                    <p>{{ recipe.content | striptags('<strong><b><u><i><a>') | raw }}</p>
+                    <p>{{ recipe.content | striptags('<strong><b><u><i><a><p><h2><h3><h4><ul><li>') | raw }}</p>
                 </div>
             </article>
 
